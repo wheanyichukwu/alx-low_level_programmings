@@ -16,9 +16,9 @@ if (c != 50)
 {
 if (c != 52)
 {
-_putchar(c);
+putchar(c);
 }
 }
 }
-_putchar('\n');
+putchar('\n');
 }
