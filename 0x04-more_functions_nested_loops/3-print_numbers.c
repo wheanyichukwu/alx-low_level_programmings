@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,7 +12,7 @@ int c;
 
 for (c = 48; c < 58; c++)
 {
-	_putchar(c);
+	putchar(c);
 }
-_putchar('\n');
+putchar('\n');
 }
