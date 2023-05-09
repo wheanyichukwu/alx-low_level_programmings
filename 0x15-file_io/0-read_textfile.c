@@ -11,19 +11,19 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *ptr_buffer;
-	ssize_t fd;
+	ssize_t file_d;
 	ssize_t r_file;
 	ssize_t w_file;
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	file_d = open(filename, O_RDONLY);
+	if (file_d == -1)
 		return (0);
 
 	ptr_buffer = malloc(sizeof(char) * letters);
-	r_file = read(fd, ptr_buffer, letters);
-	w_file = write(STDOUT_FILENO, buf, r_file);
+	r_file = read(file_d, ptr_buffer, letters);
+	w_file = write(STDOUT_FILENO, ptr_buffer, r_file);
 
 	free(ptr_buffer);
-	close(fd);
+	close(file_d);
 	return (w_file);
 }
